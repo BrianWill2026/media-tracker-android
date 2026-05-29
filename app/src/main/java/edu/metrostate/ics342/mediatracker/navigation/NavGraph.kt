@@ -87,6 +87,7 @@ fun MediaTrackerNavGraph(navController: NavHostController) {
             composable(Routes.LIBRARY) {
                 LibraryScreen(
                     onMediaClick = { mediaId -> navController.navigate("media_detail/$mediaId") }
+
                 )
             }
 

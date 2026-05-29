@@ -1,14 +1,13 @@
 # Week {{N}} Reflection
 
 **Name: Brian W**
-**Date: 5/21**
+**Date: 5/28**
 
 ---
 
 ## Commits This Week
 
-<!-- Paste a link to your commits for this week. The easiest way: go to your repo on GitHub,
-     click "commits", and copy the URL after filtering by your name or branch. -->
+
 
 **Link: https://github.com/BrianWill2026/media-tracker-android/pull/1**
 
@@ -23,11 +22,11 @@
 
 ### What I Looked At
 
-I looked at some basic coding from week 1
+I looked at some bugs in the app about the way certain pages are layed out and loaded.
 
 ### What I Noticed
 
-I noticed that it reminded me a lot of other languages and formats that I have experienced before. 
+I noticed that there are a lot of layers that I need to learn
 
 ### Comments I Left
 
@@ -36,15 +35,15 @@ ust some words of confirmation
 
 ## One Thing I Understood More Deeply
 
-Some basic github functions
+The file structure
 
 ## One Thing I'm Still Confused About
 
-I think I am on pace.
+n/a
 
 ## Anything Else *(optional)*
 
-
+Is there a good starter series that I could watch or read that goes over some of the basics or intemediary information
 
 ---
 
