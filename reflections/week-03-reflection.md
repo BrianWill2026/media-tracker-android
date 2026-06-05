@@ -1,7 +1,7 @@
-# Week {{N}} Reflection
+# Week {{3}} Reflection
 
 **Name: Brian W**
-**Date: 5/28**
+**Date: 6/4**
 
 ---
 
@@ -20,11 +20,11 @@ Just some simple confirmation.
 
 ### What I Looked At
 
-I looked at some bugs in the app about the way certain pages are layed out and loaded.
+I looked the basic layout of the log in and some security aspects to android w/ some json forms
 
 ### What I Noticed
 
-I noticed that there are a lot of layers that I need to learn
+That Json forms are still everywhere and some more formatting for making a page
 
 ### Comments I Left
 
@@ -33,11 +33,11 @@ ust some words of confirmation
 
 ## One Thing I Understood More Deeply
 
-The file structure
+ViewModels I have a better hand of it now
 
 ## One Thing I'm Still Confused About
 
-n/a
+I have to do some catchup from the branch that I will do later this week
 
 ## Anything Else *(optional)*
 
