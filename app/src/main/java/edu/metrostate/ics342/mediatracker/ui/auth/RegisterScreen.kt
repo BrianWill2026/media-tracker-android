@@ -35,7 +35,10 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.graphics.ColorFilter
+import androidx.compose.runtime.setValue
 import edu.metrostate.ics342.mediatracker.theme.OnPrimaryContainer
 import edu.metrostate.ics342.mediatracker.theme.PrimaryContainer
 
@@ -47,12 +50,30 @@ fun RegisterScreen(
     viewModel: RegisterViewModel = viewModel()
 ) {
 
-    val email       by viewModel.email.collectAsState()
-    val password    by viewModel.password.collectAsState()
-    val displayName by viewModel.displayName.collectAsState()
-    val userName    by viewModel.userName.collectAsState()
+    var email       by remember {mutableStateOf("") }
+    var password    by remember {mutableStateOf("") }
+    var displayName by remember {mutableStateOf("") }
+    var userName    by remember {mutableStateOf("") }
+    var confirmPassword by remember {mutableStateOf("") }
+    var errorMessage by remember { mutableStateOf<String?>(null) }
+
+
     val focusManager = LocalFocusManager.current
 
+    fun attemptRegister() {
+        focusManager.clearFocus()
+            when{
+                displayName.isBlank() || email.isBlank() || userName.isBlank() ||
+                        password.isBlank() || confirmPassword.isBlank() -> {
+                            errorMessage = "Please fill in all fields."
+                        }
+                password != confirmPassword -> {
+                    errorMessage = "Passwords do not match."
+                }
+                else -> onRegisterSuccess()
+            }
+
+    }
 
     Column(
         modifier = Modifier
@@ -73,6 +94,8 @@ fun RegisterScreen(
 
         )
 
+
+
         Text(stringResource(id = R.string.register_title), style = MaterialTheme.typography.headlineMedium,
             color = MaterialTheme.colorScheme.primary)
 
@@ -88,11 +111,11 @@ fun RegisterScreen(
 
         OutlinedTextField(
             value         = displayName,
-            onValueChange = viewModel::onDisplayNameChange,
+            onValueChange = { displayName = it; errorMessage = null },
             label         = { Text(stringResource(edu.metrostate.ics342.mediatracker.R.string.display_name_label)) },
             singleLine    = true,
             keyboardOptions = KeyboardOptions(
-                keyboardType = KeyboardType.Unspecified,
+                keyboardType = KeyboardType.Text,
                 imeAction    = ImeAction.Next
             ),
             keyboardActions = KeyboardActions(
@@ -105,7 +128,7 @@ fun RegisterScreen(
 
         OutlinedTextField(
             value         = userName,
-            onValueChange = viewModel::onUserNameChange,
+            onValueChange = { userName = it; errorMessage = null },
             label         = { Text(stringResource(edu.metrostate.ics342.mediatracker.R.string.user_name_label)) },
             singleLine    = true,
             keyboardOptions = KeyboardOptions(
@@ -122,7 +145,7 @@ fun RegisterScreen(
 
         OutlinedTextField(
             value         = email,
-            onValueChange = viewModel::onEmailChange,
+            onValueChange = { email = it; errorMessage = null },
             label         = { Text(stringResource(edu.metrostate.ics342.mediatracker.R.string.email_label)) },
             singleLine    = true,
             keyboardOptions = KeyboardOptions(
@@ -139,7 +162,7 @@ fun RegisterScreen(
 
         OutlinedTextField(
             value         = password,
-            onValueChange = viewModel::onPasswordChange,
+            onValueChange = { password = it; errorMessage = null },
             label         = { Text(stringResource(edu.metrostate.ics342.mediatracker.R.string.password_label)) },
             singleLine    = true,
             visualTransformation = PasswordVisualTransformation(),
@@ -148,7 +171,7 @@ fun RegisterScreen(
                 imeAction    = ImeAction.Done
             ),
             keyboardActions = KeyboardActions(
-                onDone = { focusManager.clearFocus(); viewModel.onLoginClick() }
+                onDone = { focusManager.moveFocus(FocusDirection.Down) }
             ),
             modifier = Modifier.fillMaxWidth()
         )
@@ -156,8 +179,8 @@ fun RegisterScreen(
         Spacer(Modifier.height(12.dp))
 
         OutlinedTextField(
-            value         = password,
-            onValueChange = viewModel::onPasswordChange,
+            value         = confirmPassword,
+            onValueChange = { confirmPassword = it; errorMessage = null },
             label         = { Text(stringResource(edu.metrostate.ics342.mediatracker.R.string.confirm_label)) },
             singleLine    = true,
             visualTransformation = PasswordVisualTransformation(),
@@ -166,12 +189,29 @@ fun RegisterScreen(
                 imeAction    = ImeAction.Done
             ),
             keyboardActions = KeyboardActions(
-                onDone = { focusManager.clearFocus(); viewModel.onLoginClick() }
+                onDone = { attemptRegister() }
             ),
             modifier = Modifier.fillMaxWidth()
         )
 
-        //Button(onClick = )
+        if (errorMessage != null) {
+            Spacer(Modifier.height(8.dp))
+            Text(
+                errorMessage!!,
+                color = MaterialTheme.colorScheme.error,
+                style = MaterialTheme.typography.bodySmall
+            )
+        }
+
+        Spacer(Modifier.height(16.dp))
+        Button(
+            onClick = {attemptRegister()},
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(48.dp)
+        ) {
+            Text(stringResource(R.string.sign_up_button))
+        }
 
         Spacer(Modifier.height(16.dp))
 

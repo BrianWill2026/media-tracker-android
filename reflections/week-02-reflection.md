@@ -13,9 +13,9 @@
 
 ## Code Review
 
-**Reviewed:** Abduranhman 
-**Link to my review:** https://github.com/abduramanjigre/media-tracker-android/pull/2/changes/d7040b290a08929074ee372f4cee3b6b25154b1b
-Just some simple confirmation.
+**Reviewed:** Mark 
+**Link to my review:** https://github.com/kleincentral/media-tracker-android/pull/5#pullrequestreview-4432914868
+Looks like he is also confused one something like I was.
 
 
 ### What I Looked At

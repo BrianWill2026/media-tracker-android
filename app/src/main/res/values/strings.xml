@@ -12,9 +12,13 @@
     <string name="register_title">Create Account</string>
     <string name="register_tagline">Join the community</string>
     <string name="display_name_label">Display Name</string>
-    <string name="user_name_label">UserName</string>
+    <string name="user_name_label">User Name</string>
     <string name="account_prompt">Already have an account?</string>
     <string name="confirm_label">Confirm Password</string>
+    <string name="sign_up_button">Sign up</string>
+    <string name="error_empty_fields">Empty Fields</string>
+    <string name="error_passwords_mismatch">Passwords Are Mismatched</string>
+
 
     <!-- Navigation -->
     <string name="nav_feed">Feed</string>
