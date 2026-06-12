@@ -1,47 +1,53 @@
-# Week {{N}} Reflection
+# Week {{3}} Reflection
 
 **Name: Brian W**
-**Date: 5/28**
+**Date: 6/4**
 
 ---
 
 ## Commits This Week
 
-**Link: https://github.com/BrianWill2026/media-tracker-android/pull/3**
+**Link: https://github.com/BrianWill2026/media-tracker-android/pull/5**
 
 ---
 
 ## Code Review
 
-**Reviewed:** Mark 
-**Link to my review:** https://github.com/kleincentral/media-tracker-android/pull/5#pullrequestreview-4432914868
-Looks like he is also confused one something like I was.
+**Reviewed:** Abduranhman 
+**Link to my review:** https://github.com/abduramanjigre/media-tracker-android/pull/5#pullrequestreview-4481976572
+
+Looks like he pulled some stuff from the profs branch but other wise it looks like mine. There will probably need to be some hashing out to make sure it is working correctly.
+
 
 
 ### What I Looked At
 
-I looked at some bugs in the app about the way certain pages are layed out and loaded.
+I looked at the RegisterScreen.kt and the RegisterViewModel.kt and how the data in those fields are being handled.
 
 ### What I Noticed
 
-I noticed that there are a lot of layers that I need to learn
+I noticed we are moving from a val to a var which I want to ask next week on the specifics of why.
 
 ### Comments I Left
 
-
-ust some words of confirmation
+I Noticed he pulled from the main repository and not his own.
 
 ## One Thing I Understood More Deeply
 
-The file structure
+I understood more about how certain things can be loaded in different states and the importance on how you load them. For example password.
+Below is some of the things that I understood more on but wish to have more clarity
+
+var email       by remember {mutableStateOf("") }
+private val _displayName = MutableStateFlow("")
+val displayName: StateFlow<String> = _displayName.asStateFlow()
 
 ## One Thing I'm Still Confused About
 
-n/a
+I think that I just am wondering where the handoff to the web is made but I know we are not there yet.
 
 ## Anything Else *(optional)*
 
-Is there a good starter series that I could watch or read that goes over some of the basics or intemediary information
+n/a
 
 ---
 
