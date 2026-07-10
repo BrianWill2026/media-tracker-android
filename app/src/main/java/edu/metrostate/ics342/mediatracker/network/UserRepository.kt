@@ -1,4 +1,4 @@
-package edu.metrostate.ics342.mediatracker.data
+package edu.metrostate.ics342.mediatracker.network
 
 import edu.metrostate.ics342.mediatracker.data.model.UserProfile
 

@@ -8,7 +8,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.navigation.compose.rememberNavController
 import edu.metrostate.ics342.mediatracker.navigation.MediaTrackerNavGraph
-import edu.metrostate.ics342.mediatracker.theme.MediaTrackerTheme //imported this to work 5/21
+import edu.metrostate.ics342.mediatracker.theme.MediaTrackerTheme
 
 
 class MainActivity : ComponentActivity() {
@@ -16,7 +16,6 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            //replace MaterialTheme with MediaTrackerTheme
             MediaTrackerTheme() {
                 AppRoot()
             }

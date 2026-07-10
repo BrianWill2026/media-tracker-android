@@ -1,4 +1,4 @@
-package edu.metrostate.ics342.mediatracker.data.network
+package edu.metrostate.ics342.mediatracker.network
 
 import retrofit2.Response
 import retrofit2.http.Body
