@@ -47,7 +47,8 @@ extensions.configure<ApplicationExtension> {
         compose = true
         buildConfig = true
     }
-    }
+}
+
 kotlin {
     jvmToolchain(22)
     compilerOptions {
@@ -70,7 +71,7 @@ dependencies {
     implementation(libs.androidx.material.icons.extended)
     implementation(libs.androidx.navigation.compose)
     implementation(libs.retrofit)
-    implementation(libs.retrofit.converter.kotlinx.)
+    implementation(libs.retrofit.converter.kotlinx.serialization)
     implementation(libs.kotlinx.serialization.json)
     implementation(libs.okhttp)
     implementation(libs.okhttp.logging.interceptor)
@@ -85,6 +86,3 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 }
-
-
-

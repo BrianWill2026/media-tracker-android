@@ -1,4 +1,4 @@
-package edu.metrostate.ics342.mediatracker.data.network
+package edu.metrostate.ics342.mediatracker.network
 
 import edu.metrostate.ics342.mediatracker.data.model.UserProfile
 import kotlinx.serialization.Serializable
