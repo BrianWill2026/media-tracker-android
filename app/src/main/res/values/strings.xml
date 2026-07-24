@@ -108,6 +108,8 @@
     <string name="error_network">Network error. Check your connection and try again.</string>
     <string name="error_generic">Something went wrong. Please try again.</string>
     <string name="register_success">Account created! Please sign in.</string>
+    <string name="detail_retry">Try Again</string>
+    <string name="detail_not_found">This media item could not be found.</string>
 
     <!-- Media -->
     <string name="media_unknown_author">Unknown Author</string>
