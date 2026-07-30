@@ -16,33 +16,33 @@
 **Reviewed:** Abduranhman 
 **Link to my review:** https://github.com/abduramanjigre/media-tracker-android/pull/7
 
-Looks like he is up to date for the 
+He is re-copying files in to hopefully fix things
 
 
 
 ### What I Looked At
 
-I looked mainly at the ability to display show data though mostly with precoded values.
+I looked at the api again and double checked that my build was running which it wasn't. 
 
 ### What I Noticed
 
-I noticed that there is alot of talking and request forms that I am new to that I need to get more familar with.
+I noticed that the AI help is good, but I am not understanding what all is happening.
 
 ### Comments I Left
 
-Some basic reminder and to doublecheck and thing or two.
+Some basic reminder and to double check and thing or two.
 
 ## One Thing I Understood More Deeply
 
-I understood more about the formating of how we are formating our data like in the example form though simple it is a new format to me.
+n/a
 
 ## One Thing I'm Still Confused About
 
-I am behind I can confortable say now I need to catch up I feel like my app is straying to far from the app you are building. Or possible I am missing something simple.
+The Api calls I am not a good dox reader and would like to set up a meeting to get myself back on track.
 
 ## Anything Else *(optional)*
 
-n/a
+I am going to email you in the coming week or two to set up a meeting to get back onj track
 
 ---
 
