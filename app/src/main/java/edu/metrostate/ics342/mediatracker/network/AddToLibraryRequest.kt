@@ -1,12 +1,12 @@
 package edu.metrostate.ics342.mediatracker.network
 
 import edu.metrostate.ics342.mediatracker.data.model.LibraryStatus
-import edu.metrostate.ics342.mediatracker.data.model.LibraryStatusSerializer
 import kotlinx.serialization.Serializable
 
+// The body we send on POST /library. The spec wants { mediaId, status }.
+// status serializes to "want_to" / "in_progress" / "finished" via @SerialName on the enum.
 @Serializable
-data class AddToLibraryRequest(
+data class AddLibraryItemRequest(
     val mediaId: Int,
-    @Serializable(with = LibraryStatusSerializer::class)
     val status: LibraryStatus
 )
